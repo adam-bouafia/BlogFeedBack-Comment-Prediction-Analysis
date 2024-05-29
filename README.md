@@ -53,7 +53,6 @@ The project includes experimentation with several regression models to predict t
 - Linear Regression
 - Ridge
 - Lasso
-- ElasticNet
 - Random Forest Regressor
 - Gradient Boosting Regressor
 - Support Vector Regressor
@@ -62,6 +61,9 @@ The project includes experimentation with several regression models to predict t
 Preprocessing of the data was performed, including feature scaling. Each model was then trained using the training set and its performance was evaluated using metrics such as root mean square error and R2 score. In addition, the results were visualized using graphs.
 
 ## Results
+
+### Model Performance
+![Model Performance](img/results.png)
 
 ### Linear Regression Predictions vs True Values
 ![Linear Regression Predictions vs True Values](img/1.png)
@@ -90,8 +92,6 @@ Preprocessing of the data was performed, including feature scaling. Each model w
 ### Correlation Matrix
 ![Correlation Matrix](img/Correlation.png)
 
-### Model Performance
-![Model Performance](img/results.png)
 
 ## Conclusion
 
