@@ -1,12 +1,37 @@
-# Predicción de Comentarios en Publicaciones de Blog
+# Data Analysis Project @Univaq
 
-## Descripción del Proyecto
+This repository contains a machine learning project that aims to predict the number of comments a blog post will receive in the next 24 hours. The data set comes from blog posts, and from the information available at the time of publication, we try to predict how many comments the post will receive in a 24-hour period.
 
-Este repositorio contiene un proyecto de aprendizaje automático que tiene como objetivo predecir el número de comentarios que una publicación de blog recibirá en las próximas 24 horas. Utilizamos un conjunto de datos que proviene de publicaciones de blog, y a partir de la información disponible en el momento de la publicación, intentamos predecir cuántos comentarios recibirá la publicación en un periodo de 24 horas.
+## Table of Contents
+- [Dataset Information](#dataset-information)
+- [Dependencies](#dependencies)
+- [Project Structure](#project-structure)
+- [Implementation Details](#implementation-details)
+- [Results](#results)
+- [Conclusion](#conclusion)
+- [Images](#images)
 
-El conjunto de datos incluye características como el número total de comentarios antes de un tiempo base, el número de comentarios en las últimas 24 horas antes del tiempo base, la longitud de la publicación, entre otras.
+## Dataset Information
 
-## Dependencias
+This data originates from blog posts. The raw HTML-documents of the blog posts were crawled and processed.
+
+The prediction task associated with the data is the prediction of the number of comments in the upcoming 24 hours.
+
+- In the train data, the base times were in the years 2010 and 2011.
+- In the test data the base times were in February and March 2012.
+
+Attributes:
+- 1…50: Average, standard deviation, min, max, and median of the Attributes 51…60 for the source of the current blog post.
+- 51…60: Features related to the number of comments and links (trackbacks).
+- 61: The length of time between the publication of the blog post and base time.
+- 62: The length of the blog post.
+- 63…262: The 200 bag of words features for 200 frequent words of the text of the blog post.
+- 263…276: Binary indicator features (0 or 1) for the weekday of the basetime and publication date.
+- 277: Number of parent pages.
+- 278…280: Minimum, maximum, average number of comments that the parents received.
+- 281: The target: the number of comments in the next 24 hours (relative to base time).
+
+## Dependencies
 
 - Python 3.x
 - NumPy
@@ -15,63 +40,87 @@ El conjunto de datos incluye características como el número total de comentari
 - Seaborn
 - Matplotlib
 
+## Project Structure
 
-## Estructura del Proyecto
+- `data/` - Directory containing the CSV files of the dataset.
+- `blog.ipynb` - Notebook that contains the main code of the project.
+- `img/` - Directory containing images used in the README.
 
-- `data/` - Directorio que contiene los archivos CSV del conjunto de datos.
-- `blog.ipynb` - Notebook que contiene el código principal del proyecto.
+## Implementation Details
 
-## Detalles de Implementación
+The project includes experimentation with several regression models to predict the number of comments. Models include:
 
-El proyecto incluye la experimentación con varios modelos de regresión para predecir el número de comentarios. Los modelos incluyen:
-
-- Regresión Lineal
+- Linear Regression
 - Ridge
 - Lasso
 - ElasticNet
 - Random Forest Regressor
 - Gradient Boosting Regressor
 - Support Vector Regressor
-- Red Neuronal
+- Neural Network
 
-Se realizó un preprocesamiento de los datos, incluido el escalado de características. Luego, se entrenó cada modelo utilizando el conjunto de entrenamiento y se evaluó su rendimiento utilizando métricas como el error cuadrático medio y el R2 score. Además, se visualizaron los resultados mediante gráficos.
+Preprocessing of the data was performed, including feature scaling. Each model was then trained using the training set and its performance was evaluated using metrics such as root mean square error and R2 score. In addition, the results were visualized using graphs.
 
-## Gráficos de Resultados
+## Results
 
-### Resumen de los Modelos
+### Linear Regression Predictions vs True Values
+![Linear Regression Predictions vs True Values](img/1.png)
 
-![Resumen de los Modelos](img/resultados.png)
+### Ridge Predictions vs True Values
+![Ridge Predictions vs True Values](img/2.png)
 
-### Gráficos de Dispersión por Modelo
+### Lasso Predictions vs True Values
+![Lasso Predictions vs True Values](img/3.png)
 
+### Random Forest Predictions vs True Values
+![Random Forest Predictions vs True Values](img/4.png)
 
-![Modelo 1](img/1.png)
+### Gradient Boosting Predictions vs True Values
+![Gradient Boosting Predictions vs True Values](img/5.png)
 
+### Support Vector Regressor Predictions vs True Values
+![Support Vector Regressor Predictions vs True Values](img/6.png)
 
-![Modelo 2](img/2.png)
+### Neural Network Predictions vs True Values
+![Neural Network Predictions vs True Values](img/7.png)
 
+### Boxplot
+![Boxplot](img/Boxplot.png)
 
-![Modelo 3](img/3.png)
+### Correlation Matrix
+![Correlation Matrix](img/Correlation.png)
 
+### Model Performance
+![Model Performance](img/results.png)
 
-![Modelo 4](img/4.png)
+## Conclusion
 
+### Observations
+- **Linear Regression**: Struggles with high variance in predictions.
+- **Ridge Regression**: Slight improvement over linear regression but still high variance.
+- **Lasso Regression**: Similar to Ridge, with some feature selection capabilities.
+- **Random Forest**: Shows better performance with less variance.
+- **Gradient Boosting**: Best performance in terms of accuracy and variance reduction.
+- **Support Vector Regressor**: Moderate performance with specific kernel functions.
+- **Neural Network**: Capable of capturing complex patterns but may overfit with small data.
 
-![Modelo 5](img/5.png)
+### Dataset Analysis
+- The dataset is characterized by high variability in the number of comments.
+- Features show varying levels of correlation with the target variable.
+- Standard deviation among features indicates significant spread, necessitating normalization and careful model tuning.
 
+## Future Work
+- Expanding the dataset with more diverse sources can improve model generalization.
+- Exploring other machine learning models and deep learning architectures.
+- Further feature engineering to extract more informative features.
 
-![Modelo 6](img/6.png)
+### Summary
+This project demonstrates the use of various regression techniques to predict the number of comments on blog posts. Gradient Boosting showed the best performance, indicating its robustness in handling this dataset. Further improvements can be achieved by enhancing the dataset and exploring advanced modeling techniques.
 
+## Images
 
-![Modelo 7](img/7.png)
+All images used in this README are stored in the `img/` directory for reference.
 
+---
 
-![Modelo 8](img/8.png)
-
-## Contribuciones
-
-Las contribuciones a este proyecto son bienvenidas. Si encuentras algún error o tienes alguna sugerencia de mejora, no dudes en abrir un Issue o enviar un Pull Request.
-
-## Licencia
-
-Este proyecto está bajo la Licencia MIT. Consulte el archivo [LICENSE](LICENSE) para obtener más detalles.
+This project is part of the Data Analysis course at Univaq.
