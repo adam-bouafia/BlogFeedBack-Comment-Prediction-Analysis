@@ -43,8 +43,13 @@ Attributes:
 ## Project Structure
 
 - `data/` - Directory containing the CSV files of the dataset.
-- `blog.ipynb` - Notebook that contains the main code of the project.
-- `img/` - Directory containing images used in the README.
+- `Dataset Zip/` - Directory containing zipped dataset files.
+- `Documentation/` - Directory containing project documentation files.
+- `output_images/` - Directory containing images used in the README.
+- `BlogPost-Comment-Analysis.ipynb` - Notebook that contains the main code of the project.
+- `README.md` - Markdown file containing the project overview and instructions.
+- `.gitattributes` - Git attributes configuration file.
+- 
 
 ## Implementation Details
 
