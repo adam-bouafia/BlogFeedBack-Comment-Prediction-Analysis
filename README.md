@@ -62,6 +62,15 @@ Preprocessing of the data was performed, including feature scaling. Each model w
 
 ## Results
 
+### Correlation Matrix
+![Correlation Matrix](img/Correlation.png)
+
+### Boxplots
+![Correlation Matrix](img/Boxplot.png)
+
+### Feature Distributions
+![Correlation Matrix](img/Feature Distributions.png)
+
 ### Model Performance
 ![Model Performance](img/results.png)
 
@@ -89,8 +98,7 @@ Preprocessing of the data was performed, including feature scaling. Each model w
 ### Boxplot
 ![Boxplot](img/Boxplot.png)
 
-### Correlation Matrix
-![Correlation Matrix](img/Correlation.png)
+
 
 
 ## Conclusion
