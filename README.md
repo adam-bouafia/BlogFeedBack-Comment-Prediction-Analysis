@@ -63,41 +63,37 @@ Preprocessing of the data was performed, including feature scaling. Each model w
 ## Results
 
 ### Correlation Matrix
-![Correlation Matrix](img/Correlation.png)
-
-### Boxplots
-![Correlation Matrix](img/Boxplot.png)
-
-### Feature Distributions
-![Correlation Matrix](img/Feature Distributions.png)
-
-### Model Performance
-![Model Performance](img/results.png)
-
-### Linear Regression Predictions vs True Values
-![Linear Regression Predictions vs True Values](img/1.png)
-
-### Ridge Predictions vs True Values
-![Ridge Predictions vs True Values](img/2.png)
-
-### Lasso Predictions vs True Values
-![Lasso Predictions vs True Values](img/3.png)
-
-### Random Forest Predictions vs True Values
-![Random Forest Predictions vs True Values](img/4.png)
-
-### Gradient Boosting Predictions vs True Values
-![Gradient Boosting Predictions vs True Values](img/5.png)
-
-### Support Vector Regressor Predictions vs True Values
-![Support Vector Regressor Predictions vs True Values](img/6.png)
-
-### Neural Network Predictions vs True Values
-![Neural Network Predictions vs True Values](img/7.png)
+![Correlation Matrix](output_images/Correlation.png)
 
 ### Boxplot
-![Boxplot](img/Boxplot.png)
+![Correlation Matrix](output_images/Boxplot.png)
 
+### Feature Distributions
+![Correlation Matrix](output_images/Feature_Distributions.png)
+
+### Model Performance
+![Model Performance](output_images/results.png)
+
+### Linear Regression Predictions vs True Values
+![Linear Regression Predictions vs True Values](output_images/1.png)
+
+### Ridge Predictions vs True Values
+![Ridge Predictions vs True Values](output_images/2.png)
+
+### Lasso Predictions vs True Values
+![Lasso Predictions vs True Values](output_images/3.png)
+
+### Random Forest Predictions vs True Values
+![Random Forest Predictions vs True Values](output_images/4.png)
+
+### Gradient Boosting Predictions vs True Values
+![Gradient Boosting Predictions vs True Values](output_images/5.png)
+
+### Support Vector Regressor Predictions vs True Values
+![Support Vector Regressor Predictions vs True Values](output_images/6.png)
+
+### Neural Network Predictions vs True Values
+![Neural Network Predictions vs True Values](output_images/7.png)
 
 
 
@@ -127,7 +123,7 @@ This project demonstrates the use of various regression techniques to predict th
 
 ## Images
 
-All images used in this README are stored in the `img/` directory for reference.
+All images used in this README are stored in the `output_images/` directory for reference.
 
 ---
 
