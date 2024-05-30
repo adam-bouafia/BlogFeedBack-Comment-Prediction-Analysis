@@ -49,7 +49,6 @@ Attributes:
 - `BlogPost-Comment-Analysis.ipynb` - Notebook that contains the main code of the project.
 - `README.md` - Markdown file containing the project overview and instructions.
 - `.gitattributes` - Git attributes configuration file.
-- 
 
 ## Implementation Details
 
